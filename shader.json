@@ -2,8 +2,8 @@
   "ver": "0.1",
   "info": {
     "id": "",
-    "name": "",
-    "description": "",
+    "name": "Spider lily",
+    "description": "This shader shows the beauty of red and green in a circular animation.",
     "tags": []
   },
   "renderpass": [
