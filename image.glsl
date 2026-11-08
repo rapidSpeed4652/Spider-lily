@@ -3,7 +3,7 @@ vec3 palette(float t)
   vec3 a = vec3(0.5, 0.5, 0.5);
   vec3 b = vec3(0.5, 0.5, 0.5);
   vec3 c = vec3(1.0, 1.0, 1.0);
-  vec3 d = vec3(0.43, 0.3, 0.557);
+  vec3 d = vec3(0.43, 0.3, 0.357);
 
   return a + b*cos(6.28318*(c*t+d) );
 }
@@ -13,7 +13,7 @@ void mainImage(out vec4 fragColor, in vec2 fragCoord) {
   vec2 uv0 = uv;
   vec3 finalColor = vec3(0.0);
 
-  for(float i = 0.0; i < 5.0; i++)
+  for(float i = 0.0; i < 4.0; i++)
   {
     uv = fract(uv * 1.4) - 0.5;
 
@@ -21,7 +21,7 @@ void mainImage(out vec4 fragColor, in vec2 fragCoord) {
 
     vec3 col = palette(length(uv0) + iTime*.2);
 
-    d = sin(d*8. + iTime)/6.;
+    d = sin(d*10. + iTime)/6.;
     d = abs(d);
 
     d = 0.02 / d;
